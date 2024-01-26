@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Erasmo Dominguez"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "https://gravatar.com/erasmolpac2061546c9"
   bio              : "Author bio"
   location         : "Canary Islands"
   email            :
