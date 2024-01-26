@@ -1,3 +1,5 @@
 main:
   - title: "Sitemap"
     url: /sitemap/
+  - title: Profile
+    url: /profile/
