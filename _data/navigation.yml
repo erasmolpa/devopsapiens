@@ -1,5 +1,7 @@
 main:
-  - title: "Sitemap"
-    url: /sitemap/
-  - title: "Profile"
-    url: /profile/
+  - title: "Posts"
+    url: /posts/
+  - title: "About me"
+    url: /about/
+  - title: "Professional Services"
+    url: /professiona-services/
