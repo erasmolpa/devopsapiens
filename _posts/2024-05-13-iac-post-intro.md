@@ -45,6 +45,32 @@ Para una definición más completa , [wikipedia IaC](https://en.wikipedia.org/wi
 Dame motives 
 Increased consistency and repeatability: 
 
+# Beneficios: 
+
+Podría enumerarte infinidad de beneficios. Puedes encontrar multitud de posts que te lo explicarán mejor que yo , asi que me voy a centrar en solamente dos de ellos que para mi son los más interesantes (en realidad es que no me apetece hablar aqui de seguridad, costes, colaboracion jaja :D )
+
+## Consistencia:
+
+ Se refiere a la uniformidad y coherencia en la configuración y el comportamiento de los recursos de infraestructura. En el contexto de IaC, la consistencia implica que los entornos y configuraciones sean reproducibles y predecibles. Por ejemplo, si desplegamos la misma configuración varias veces, esperamos obtener los mismos resultados en cada instancia.
+
+**Ejemplo:** Utilizando el gestor de paquetes `apt` en sistemas basados en Debian, el siguiente comando siempre instalará la misma versión de Apache:
+
+```bash
+sudo apt update && sudo apt install apache2
+
+Cada vez que ejecutamos este comando, obtenemos la misma versión de Apache instalada, asegurando consistencia en la configuración del servidor web en múltiples ejecuciones.
+
+## Idempotencia:
+
+Es la propiedad de una operación en la que su aplicación repetida no produce cambios adicionales más allá del primer efecto. En el contexto de IaC, la idempotencia implica que la ejecución repetida del código de infraestructura no cause efectos secundarios no deseados. Por ejemplo, si aplicamos un script de aprovisionamiento varias veces, solo se implementarán los cambios necesarios, evitando la duplicación de recursos o la alteración de configuraciones existentes.
+
+Ejemplo: Supongamos que queremos agregar una regla de firewall para permitir el tráfico SSH en nuestro servidor. El siguiente comando de iptables añade esta regla, pero si lo ejecutamos múltiples veces, no se crearán reglas duplicadas: 
+
+```bash
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+
+Al ejecutar este comando varias veces, solo se agregará una única regla para permitir el tráfico SSH, evitando la duplicación de reglas y garantizando la idempotencia en la configuración del firewall.
+
 
 # Infraestructura:
 
