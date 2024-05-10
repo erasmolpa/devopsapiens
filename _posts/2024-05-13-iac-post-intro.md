@@ -1,30 +1,34 @@
 ---
-title: "Infraestructura como Código. Breve introducción"
+title: "Infraestructura como Código. Breve introducción caótica."
 date: 2024-05-13
 last_modified_at: 2024-05-13
 cat:
   - IaC
-  - series
-  - foundations
 ---
 
 # Por qué este Post?:
 
-Veo demasiadas Tooling fights por ahi escritas, sobre Iac , donde en realidad se habla de que caracteristicas y que ventajas tiene la herramienta X sobre la Y. solo son herramientas y mi objetivo con este post es volcar algunas ideas, principios y conceptos basicos de la IaC. 
+Una de las sensaciones que menos me gustan como perfil técnico , es esa que se tiene cuando se habla todo el tiempo en el contexto de la solución. Me explico, son esas conversacines que pretender ser el origen de una toma de decisión para un problema que en realidad va mas allá de si una herramienta es mejor/preor que otra.
 
-Intentaré ser neutral, pragmatico y desordenado :) ya que esto es mas bien un volcado de pensamientos. 
+He vivido esa situación en innumerables ocasiones, muchas de ellas con resultados mejorables. Pero mi actitud optimista y el rodearte de personas con algo de pensamiento pragmático (y sobre todo crítico) te hace tener algo de fe 
 
-📓 Intenté generar este post con ChatGPT y Copilot  y fracasé ...Aunque  son herramientas que uso a diario y hacen que sea mas vago de lo que soy si cabe, el resultado no fue bueno asi que espero que al menos hagas un repost de esto porque he tenido que pensar y esforzarme. Dejo aqui evidencia de la imagen generada por Copilot para representar API layers vs Infra Layer de manera ilustrativa 
-
-![OIG3](https://github.com/our-learning-path/learning-path-erasmo-2024/assets/1197538/9eed00f4-1228-49db-afe6-69555c4ad2cd)
-
+Este post podría tener un enfoque de , porque Iac , beneficios bla bla..pero no me apetece escribir algo asi ..lo siento ...simplemente voy a dejar caer aquí algo de contexto y algunos principios básicos sobre el asunto 
 
 
 # Breve introducción al problema:
 
+Da igual el tipo de rol que tengas en tu compañía/proyecto; Backend , Frontend , Sys Admin/"DevOps"/SRE/Platform Engineer/X/Y/Z , que seguro que en algun punto de tu carrera y con más frecuencia de lo que te gustaría ,  has tenido que lidiar con manejar frustación al instalar/configurar algo que tenga que ver con "infra". 
+
+Si eres Developer, "estas de suerte" has pasado de tener que invertir multitud de horas en instalar y configurar un servidor local a poder decir, en mi local funciona! incluso probablemente hay muchisima gente preocupada ahora mismo por porporcionarte una buena Dev Experience (Ironía de la buena )
+
+Lo sé amigo, se que la vida del Dev no es tan bonita :D ..pero que pasa con la gente al otro lado del muro? esos que conocemos como , "la parte Ops" . Pues dejame decirte que esta gente va avanzando a pasos agiganados, ya escriben la infraestructura como código y son capaces de crearte un entorno de produccion en 
+
+
+Lidiar con el concepto de Yak Shaving puede ser muy frustrante tambien creeme . Lo he 
+
+
 Gestionar la infraestructura en la nube puede ser un desafío abrumador. Las organizaciones se enfrentan a una complejidad creciente, con infraestructuras distribuidas en múltiples proveedores de nube y entornos locales. La gestión manual de estos recursos es propensa a errores y no escalable. Además, la falta de consistencia entre los diferentes entornos, como desarrollo, pruebas y producción, puede provocar problemas de compatibilidad y seguridad.
 
-En muchos proyectos actuales, nos encontramos con una serie de pasos manuales o semi-automatizados que son propensos a errores y no son idempotentes. Estos pasos a menudo incluyen configuraciones específicas del proveedor de la nube, instalaciones de software y ajustes de red. Además, en un fenómeno conocido como "Yak Shaving", nos encontramos realizando una serie de tareas aparentemente irrelevantes que consumen tiempo y recursos valiosos, como la configuración de herramientas de desarrollo o la resolución de dependencias de software.
 
 # La solución:
 
@@ -37,6 +41,9 @@ IaC nos permite tratar la infraestructura como código, aplicando los principios
 "Es un enfoque que permite provisionar y configurar recursos de infraestructura de manera programática"
 
 Para una definición más completa , [wikipedia IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)
+
+Dame motives 
+Increased consistency and repeatability: 
 
 
 # Infraestructura:
@@ -51,7 +58,6 @@ Para una definición más completa , [wikipedia IaC](https://en.wikipedia.org/wi
 - **Consistencia:** Mantener la consistencia entre los recursos de la infraestructura en la nube es fundamental para garantizar su confiabilidad y seguridad.
 - **Transparencia:** La transparencia en IaC implica tener visibilidad y comprensión del estado y la configuración de los recursos en la nube en todo momento.
 
----
 
 # Code:
 
@@ -89,12 +95,10 @@ He visto infinidad de batallas entre herramientas y soluciones de IaC. Creo ,que
 
 1. Entiende los fundamentos. La herramienta es "lo de menos" 
 2. Se pragmatico. 
-3. IaC no es para todo el mundo. Empoderar o implantar Iac no es gratis 
+3. IaC no es para todo el mundo. Empoderar o implantar Iac no es gratis
+4. 
 ## Conclusiones
 
-Cloud Native representa un cambio fundamental en la forma en que se desarrollan, implementan y gestionan las aplicaciones en la era de la nube. Al adoptar los principios y prácticas de Cloud Native, las organizaciones pueden beneficiarse de una mayor agilidad, flexibilidad y eficiencia en el desarrollo de software.
-
-Espero que esta introducción te haya proporcionado una comprensión básica de lo que implica ser Cloud Native y por qué es importante en el mundo actual del desarrollo de software.
 
 ¡Gracias por leer!
 
