@@ -10,16 +10,17 @@ tags:
   - foundations
 ---
 
-# Aviso del objetivo del post:
+# Porque este Post:
 
-En este post, nos sumergiremos en el fascinante mundo de Infrastructure as Code (IaC). Nuestro objetivo principal es proporcionar una visión neutral y práctica de qué es IaC y cómo puede abordar los desafíos en la gestión de la infraestructura en la nube. No discutiremos sobre qué herramienta es la mejor ni sobre los beneficios de IaC en comparación con los métodos tradicionales. En su lugar, nos centraremos en entender qué es IaC, qué implica y cómo puede ser aprovechado para generar y recrear recursos en infraestructuras en la nube de manera eficiente.
+Veo demasiadas Tooling fights por ahi escritas, sobre Iac , donde en realidad se habla de que caracteristicas y que ventajas tiene la herramienta X sobre la Y. solo son herramientas y mi objetivo con este post es volcar algunas ideas, principios y conceptos basicos de la IaC. 
 
-📓 Intenté generar este post con ChatGPT y Copilot , y aunque son herramientas que uso a diario y hacen que sea mas vago de lo que soy si cabe, el resultado no fue bueno asi que espero que al menos hagas un repost de esto porque he tenido que pensar y esforzarme. Dejo aqui evidencia de la imagen generada por Copilot para representar API layers vs Infra Layer de manera ilustrativa 
+Intentaré ser neutral, pragmatico y desordenado :) ya que esto es mas bien un volcado de pensamientos. 
+
+📓 Intenté generar este post con ChatGPT y Copilot  y fracasé ...Aunque  son herramientas que uso a diario y hacen que sea mas vago de lo que soy si cabe, el resultado no fue bueno asi que espero que al menos hagas un repost de esto porque he tenido que pensar y esforzarme. Dejo aqui evidencia de la imagen generada por Copilot para representar API layers vs Infra Layer de manera ilustrativa 
 
 ![OIG3](https://github.com/our-learning-path/learning-path-erasmo-2024/assets/1197538/9eed00f4-1228-49db-afe6-69555c4ad2cd)
 
 
----
 
 # Breve introducción al problema:
 
