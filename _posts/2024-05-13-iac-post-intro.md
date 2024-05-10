@@ -1,8 +1,8 @@
 ---
-title: "Infraestructura como Código. Concetp fundamentos, principios e ideas locas "
+title: "Infraestructura como Código. Breve introducción"
 date: 2024-05-13
 last_modified_at: 2024-05-13
-cat
+cat:
   - IaC
   - series
   - foundations
