@@ -1,10 +1,8 @@
 ---
-title: "Breve intro a la IaC. Algunos fundamentos, principios e ideas sacadas del dolor "
+title: "Infraestructura como Código. Concetp fundamentos, principios e ideas locas "
 date: 2024-05-13
 last_modified_at: 2024-05-13
-categories:
-  - IaC
-tags:
+cat
   - IaC
   - series
   - foundations
