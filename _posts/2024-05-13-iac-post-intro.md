@@ -57,6 +57,7 @@ Podría enumerarte infinidad de beneficios. Puedes encontrar multitud de posts q
 
 ```bash
 sudo apt update && sudo apt install apache2
+```
 
 Cada vez que ejecutamos este comando, obtenemos la misma versión de Apache instalada, asegurando consistencia en la configuración del servidor web en múltiples ejecuciones.
 
@@ -68,6 +69,7 @@ Ejemplo: Supongamos que queremos agregar una regla de firewall para permitir el 
 
 ```bash
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+```
 
 Al ejecutar este comando varias veces, solo se agregará una única regla para permitir el tráfico SSH, evitando la duplicación de reglas y garantizando la idempotencia en la configuración del firewall.
 
