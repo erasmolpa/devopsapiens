@@ -8,7 +8,7 @@ cat:
   - foundations
 ---
 
-# Porque este Post:
+# Por qué este Post?:
 
 Veo demasiadas Tooling fights por ahi escritas, sobre Iac , donde en realidad se habla de que caracteristicas y que ventajas tiene la herramienta X sobre la Y. solo son herramientas y mi objetivo con este post es volcar algunas ideas, principios y conceptos basicos de la IaC. 
 
@@ -26,15 +26,18 @@ Gestionar la infraestructura en la nube puede ser un desafío abrumador. Las org
 
 En muchos proyectos actuales, nos encontramos con una serie de pasos manuales o semi-automatizados que son propensos a errores y no son idempotentes. Estos pasos a menudo incluyen configuraciones específicas del proveedor de la nube, instalaciones de software y ajustes de red. Además, en un fenómeno conocido como "Yak Shaving", nos encontramos realizando una serie de tareas aparentemente irrelevantes que consumen tiempo y recursos valiosos, como la configuración de herramientas de desarrollo o la resolución de dependencias de software.
 
----
-
 # La solución:
 
 Infrastructure as Code (IaC) ofrece una solución a estos desafíos. Es una metodología que permite definir, implementar y gestionar la infraestructura de TI utilizando código. En lugar de realizar cambios manualmente en la infraestructura en la nube, podemos escribir código que describa esos recursos y su configuración, y luego utilizar herramientas especializadas para implementar y mantener esa infraestructura de manera automatizada, consistente y, sobre todo, idempotente.
 
 IaC nos permite tratar la infraestructura como código, aplicando los principios de desarrollo de software a la gestión de la infraestructura. Esto significa que podemos aprovechar las prácticas de desarrollo ágil, como la integración continua y la entrega continua, para iterar rápidamente en nuestra infraestructura y responder de manera eficiente a los cambios en los requisitos del negocio.
 
----
+# Definición: 
+
+"Es un enfoque que permite provisionar y configurar recursos de infraestructura de manera programática"
+
+Para una definición más completa , [wikipedia IaC](https://en.wikipedia.org/wiki/Infrastructure_as_code)
+
 
 # Infraestructura:
 
