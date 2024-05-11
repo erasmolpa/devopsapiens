@@ -1,5 +1,5 @@
 ---
-title: "Introduccion a la IaC. Algunos Funamentos y Principios."
+title: "Introduccion a la IaC. Ideas y Principios"
 date: 2024-05-13
 last_modified_at: 2024-05-13
 cat:
@@ -35,12 +35,14 @@ IaC nos permite tratar la infraestructura como código, aplicando los principios
 
 
 
-# Fundamentos: 
+# Beneficios: 
 
 Puedes encontrar multitud de posts que te lo explicarán las características y beneficios. Me gustaría comentar las que considero mas relevantes a la hora de llevar IaC a cualquier proyecto: 
 
 
-## Idempotencia:
+# Principios
+
+- **Idempotencia:** _no quiero sorpresas_
 
 Es la propiedad de una operación en la que su aplicación repetida no produce cambios adicionales más allá del primer efecto. En el contexto de IaC, la idempotencia implica que la ejecución repetida del código de infraestructura no cause efectos secundarios no deseados. Por ejemplo, si aplicamos un script de aprovisionamiento varias veces, solo se implementarán los cambios necesarios, evitando la duplicación de recursos o la alteración de configuraciones existentes.
 
@@ -52,13 +54,13 @@ scp user@remote_host:/path/to/config_file.txt /path/to/local_directory/
 
 Si ejecutamos este comando varias veces, el archivo se copiará solo una vez, y las ejecuciones posteriores no tendrán ningún efecto adicional, ya que el archivo ya estará presente en la ubicación especificada. No se crearán copias adicionales del archivo, lo que demuestra la propiedad idempotente del comando.
 
-## Repetibilidad: 
-
+- **Reusabilidad:** _Eso que acabas de hacer..Podrías repetirlo?_ 
+  
 Se refiere a la capacidad de repetir un proceso o una acción de manera consistente y predecible. En el contexto de IaC, la repeatabilidad implica que al desplegar la misma configuración varias veces, se obtendrán los mismos resultados en cada instancia. Esto asegura que los entornos y configuraciones sean reproducibles, lo que facilita la creación de entornos consistentes y la corrección de errores de manera eficiente
 
 Ejemplo: Con el ejemplo anterior, siempre que ejecutemos ese comando, obtendremos el mismo resultado, es decir, el archivo de configuración se copiará desde la ubicación remota al directorio local especificado. Esto asegura que el proceso sea repetible, 
 
-## Consistencia:
+- **Consistencia:**
 
  Se refiere a la uniformidad y coherencia en la configuración y el comportamiento de los recursos de infraestructura. En el contexto de IaC, la consistencia implica que los entornos y configuraciones sean reproducibles y predecibles. Por ejemplo, si desplegamos la misma configuración varias veces, esperamos obtener los mismos resultados en cada instancia.
 
@@ -76,17 +78,6 @@ fi
 ```
 
 cada vez que ejecutamos el script, se verificará si el archivo de configuración ya está presente en el servidor local. Si ya existe, el script mostrará un mensaje indicando que el archivo ya está allí. Si no existe, se copiará el archivo desde la ubicación remota al servidor local. 
-
-
-# Principios
-
-- **Reusabilidad:** _Eso que acabas de hacer..Podrías repetirlo?_ 
-  
-  Escribir código reutilizable nos permite aprovechar soluciones existentes y evitar duplicar esfuerzos.
-
-- **Consistencia:** 
-  
-  Mantener la consistencia entre los recursos de la infraestructura en la nube es fundamental para garantizar su confiabilidad y seguridad.
 
 - **Transparencia:** 
   
