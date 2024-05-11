@@ -1,21 +1,21 @@
 ---
-title: "Infraestructura como Código. Breve introducción caótica."
+title: "Introduccion a la IaC. Algunos Funamentos y Principios."
 date: 2024-05-13
 last_modified_at: 2024-05-13
 cat:
   - IaC
 ---
 
-# Contexto:
+# Introducción:
 
-En tecnología es  Ya sabeis, esas conversacines que pretender ser el origen de una toma de decisión para un problema que en realidad va mas allá de si una herramienta es mejor/preor que otra.
+En tecnología es  Ya sabeis, esas conversaciones que pretender ser el origen de una toma de decisión para un problema que en realidad va mas allá de si una herramienta es mejor/preor que otra.
 
 He vivido esa situación en innumerables ocasiones, muchas de ellas con resultados mejorables. Pero mi actitud optimista y el rodearte de personas con algo de pensamiento pragmático (y sobre todo crítico) te hace tener algo de fe 
 
 Este post podría tener un enfoque de , porque Iac , beneficios bla bla..pero no me apetece escribir algo asi ..lo siento ...simplemente voy a dejar caer aquí algo de contexto y algunos principios básicos sobre el asunto 
 
 
-# El Problema:
+## El Problema:
 
 Independientemente de tu rol/experiencia en este mundo de la tecnología, es bastante probable que en algun punto de tu carrera y con más frecuencia de lo que te gustaría has tenido que lidiar con la frustrante labor de aprovisionar/configurar algo de "infra". 
 
@@ -25,7 +25,7 @@ La infraestructura ha ido evolucionando  que ha llevado desde servidores físico
 
 Es decir, el problema a resolver radica en la complejidad creciente de gestionar la infraestructura a medida que ha ido mutando continuamente. 
 
-# La solución:
+## La solución:
 
 _IaC "Enfoque que permite crear y configurar recursos de infraestructura de manera programática"_
 
@@ -35,9 +35,10 @@ IaC nos permite tratar la infraestructura como código, aplicando los principios
 
 
 
-# Características: 
+# Fundamentos: 
 
 Puedes encontrar multitud de posts que te lo explicarán las características y beneficios. Me gustaría comentar las que considero mas relevantes a la hora de llevar IaC a cualquier proyecto: 
+
 
 ## Idempotencia:
 
@@ -77,37 +78,49 @@ fi
 cada vez que ejecutamos el script, se verificará si el archivo de configuración ya está presente en el servidor local. Si ya existe, el script mostrará un mensaje indicando que el archivo ya está allí. Si no existe, se copiará el archivo desde la ubicación remota al servidor local. 
 
 
-# Infraestructura:
+# Principios
 
-## Principios:
-- **No te necesito:** Con IaC, podemos generar y recrear recursos en la infraestructura en la nube de manera automatizada, eliminando la necesidad de intervención manual en cada paso del proceso.
-- **Podrías repetirlo? Por supuesto!:** La capacidad de reproducir recursos en diferentes entornos de manera consistente es esencial en IaC.
-- **Stability = Continuous Change:** La estabilidad en IaC no significa inmovilidad, sino la capacidad de implementar cambios de manera segura y controlada en tu infraestructura en la nube.
+- **Reusabilidad:** _Eso que acabas de hacer..Podrías repetirlo?_ 
+  
+  Escribir código reutilizable nos permite aprovechar soluciones existentes y evitar duplicar esfuerzos.
 
-## Core Practices:
-- **Reusabilidad:** Escribir código reutilizable nos permite aprovechar soluciones existentes y evitar duplicar esfuerzos.
-- **Consistencia:** Mantener la consistencia entre los recursos de la infraestructura en la nube es fundamental para garantizar su confiabilidad y seguridad.
-- **Transparencia:** La transparencia en IaC implica tener visibilidad y comprensión del estado y la configuración de los recursos en la nube en todo momento.
+- **Consistencia:** 
+  
+  Mantener la consistencia entre los recursos de la infraestructura en la nube es fundamental para garantizar su confiabilidad y seguridad.
+
+- **Transparencia:** 
+  
+  La transparencia en IaC implica tener visibilidad y comprensión del estado y la configuración de los recursos en la nube en todo momento.
+
+- **Estabilidad:** _"no tengo miedo a cambiar"_ 
+  
+  La estabilidad en IaC no significa inmovilidad, sino la capacidad de implementar cambios de manera segura y controlada en tu infraestructura en la nube.
+
+- **Efimera:** _"no te necesito"_ 
+  
+  Con IaC, podemos generar y recrear recursos en la infraestructura en la nube de manera automatizada, eliminando la necesidad de intervención manual en cada paso del proceso.
 
 
-# Code:
+## En Práctica:
 
-## Principios:
 - **El código de infraestructura es fuego real:** Al igual que el fuego real, el código de infraestructura tiene un impacto significativo en la estabilidad y seguridad de la infraestructura en la nube.
 - **Las pruebas son duras, y no negociables:** Las pruebas automatizadas son esenciales en IaC para garantizar la calidad y confiabilidad de la infraestructura en la nube.
 - **Se pragmático:** Adoptar un enfoque pragmático al escribir código de infraestructura en la nube es fundamental para lograr los objetivos del proyecto de manera eficiente y efectiva.
 
-## Core Practices:
 - **Cada cosa en su sitio:** Entender la complejidad implícita y explícita de la infraestructura nos ayuda a organizar y estructurar el código de manera más efectiva.
 - **No quiero sorpresas:** La consistencia y la predictibilidad son fundamentales en IaC.
 - **Idempotencia:** La idempotencia es un principio fundamental en IaC que garantiza que la ejecución del código de infraestructura en la nube produzca el mismo resultado, independientemente del estado actual de la infraestructura.
 
-## Nos parecemos más de lo que te imaginas
+## Es la IaC una Práctica comparable al desarrollo de una API? 
 
+0. **Desarrollo enfocado a reutilización de componentes:**
+ 
 1. **Capas de la infraestructura como capas en una API:**
+
    - Al diseñar una API de producto, a menudo se divide en capas, como la capa de presentación, la capa de lógica de negocio y la capa de acceso a datos. De manera similar, al crear Infraestructura como Código, podemos pensar en diferentes capas de infraestructura, como la capa de red (VPC), la capa de almacenamiento (buckets de S3), la capa de computación (instancias EC2), entre otras. Cada una de estas capas cumple un propósito específico y se diseña para trabajar en conjunto para proporcionar un entorno de infraestructura completo.
 
 2. **Externalización de la configuración:**
+
    - Al desarrollar una API de producto, a menudo es útil externalizar la configuración, como las URLs de conexión a bases de datos o las claves de API, para que puedan ser modificadas fácilmente sin necesidad de cambiar el código fuente. De manera similar, en IaC, podemos externalizar la configuración de la infraestructura utilizando prácticas como Configuration as Code (CaC). Esto nos permite definir la configuración de la infraestructura en archivos de código que pueden versionarse, revisarse y compartirse fácilmente, lo que facilita la gestión y el mantenimiento de la infraestructura a lo largo del tiempo.
 
 3. **Versionado y control de cambios:**
@@ -119,16 +132,13 @@ cada vez que ejecutamos el script, se verificará si el archivo de configuració
 5. **Orquestación de recursos:**
    - Desarrollar una API de producto a menudo implica orquestar diferentes componentes y servicios para proporcionar una funcionalidad completa y coherente. Por ejemplo, podemos utilizar un patrón de diseño como el patrón de repositorio para separar la lógica de acceso a datos de la lógica de negocio. En IaC, también necesitamos orquestar diferentes recursos de infraestructura, como instancias de servidor, bases de datos y redes, para crear un entorno de infraestructura completo y funcional. Herramientas como Terraform y AWS CloudFormation nos permiten definir y gestionar estas relaciones de manera declarativa.
 
-## Consejos extraídos desde la observación
-
-He visto infinidad de batallas entre herramientas y soluciones de IaC. Creo ,que hay mas material disponible en internet enfocado en comparar herramientas que post ...
-
-
-1. Entiende los fundamentos. La herramienta es "lo de menos" 
-2. Se pragmatico. 
-3. IaC no es para todo el mundo. Empoderar o implantar Iac no es gratis
-4. 
 ## Conclusiones
+
+* Si en tu proyecto/empresa se esta planteando/usando IaC, asegurate de entender al máximo la complejidad del problema y en base a eso Fundamentos. E
+* Se pragmatico. Desarrollar IaC no es como desarrollar una API de negocio, pero , todas las buenas practicas y el pragmatismo es aplicable en este contexto. 
+  
+
+Espero que te halla gustado este post. En realidad pretendo convertirlo en una serie de post en la que iré tirando del hilo de todos los puntos tratados en esta intro , ya que como podras imaginar, hay mucha tela que cortar. 
 
 
 ¡Gracias por leer!
