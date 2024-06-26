@@ -1,11 +1,8 @@
 ---
-permalink: /professional-services/
-title: "Professional services"
+permalink: /services/
+title: "Services"
 layout: services
-author_profile: true
 ---
-
-<div class="services">
 
 ## Trainings
 
