@@ -1,7 +1,8 @@
 ---
-permalink: /services/
 title: "Services"
 layout: services
+permalink: /services/
+author_profile: true
 ---
 
 ## Trainings
