@@ -1,9 +1,11 @@
 ---
-title: "Services"
-layout: services
 permalink: /services/
-author_profile: true
+title: "Services"
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "chalkboard-teacher"
 ---
+
 
 ## Trainings
 
