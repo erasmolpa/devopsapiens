@@ -1,5 +1,3 @@
 main:
   - title: "Posts"
     url: /posts/
-  - title: "Services"
-    url: /services/
