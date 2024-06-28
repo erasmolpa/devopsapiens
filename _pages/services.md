@@ -33,4 +33,4 @@ Gain expertise in container orchestration with Kubernetes. We offer comprehensiv
 ### How to Get Started
 Stay tuned for more information on our upcoming training programs! If you or your team are interested, please contact me. I'm here to support your growth and success. 💪
 
-**Let’s talk!** ✉️ <a href="mailto:erasmolpa@example.com">erasmolpa@gmail.com</a>
+**Let’s talk!** ✉️ <a href="mailto:erasmo.sre@gmail.com">erasmo.sre@gmail.com</a>
